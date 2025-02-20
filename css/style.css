@@ -1,0 +1,230 @@
+:root {
+    --primary-red: #ee0021;
+    --text-color: #333333;
+    --input-bg: #ffffff;
+    --input-border: #e0e0e0;
+    --button-disabled: #e6e6e6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: var(--text-color);
+    min-height: 100vh;
+}
+
+header {
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--input-border);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.back-link {
+    color: var(--primary-red);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.logo {
+    height: 40px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.registration-container {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.progress {
+    margin-bottom: 2rem;
+}
+
+.progress span {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin: 2rem 0 1rem;
+    color: var(--text-color);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--input-border);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-red);
+}
+
+input::placeholder {
+    color: #999;
+}
+
+.password-hint {
+    display: block;
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.continue-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--button-disabled);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s;
+}
+
+.continue-btn:hover {
+    background-color: var(--primary-red);
+}
+
+.register-later {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.register-later-btn {
+    background: none;
+    border: none;
+    color: var(--primary-red);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.login-link {
+    text-align: center;
+    color: #666;
+}
+
+.login-link a {
+    color: var(--primary-red);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.decorative-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.decorative-elements img {
+    position: absolute;
+    opacity: 0.1;
+}
+
+.pizza-slice {
+    top: 10%;
+    left: 5%;
+    width: 100px;
+}
+
+.tomato {
+    top: 40%;
+    right: 10%;
+    width: 80px;
+}
+
+.pepperoni {
+    bottom: 20%;
+    left: 15%;
+    width: 60px;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .decorative-elements {
+        display: none;
+    }
+}
